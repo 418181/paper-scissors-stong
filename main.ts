@@ -2,9 +2,9 @@ input.onButtonPressed(Button.A, function () {
     if (我 == 0) {
         我 = 1
         basic.showIcon(IconNames.Scissors)
-        while (true) {
-            radio.sendValue("c", 1)
-        }
+    }
+    for (let index = 0; index < 4; index++) {
+        radio.sendValue("c", 1)
     }
 })
 function 設定初值 () {
@@ -44,18 +44,18 @@ input.onButtonPressed(Button.AB, function () {
     if (我 == 0) {
         我 = 3
         basic.showIcon(IconNames.Square)
-        while (true) {
-            radio.sendValue("c", 3)
-        }
+    }
+    for (let index = 0; index < 4; index++) {
+        radio.sendValue("c", 3)
     }
 })
 input.onButtonPressed(Button.B, function () {
     if (我 == 0) {
         我 = 2
         basic.showIcon(IconNames.SmallDiamond)
-        while (true) {
-            radio.sendValue("c", 2)
-        }
+    }
+    for (let index = 0; index < 4; index++) {
+        radio.sendValue("c", 2)
     }
 })
 radio.onReceivedValue(function (name, value) {
@@ -67,6 +67,10 @@ radio.onReceivedValue(function (name, value) {
     }
     basic.pause(1000)
     if (我 != 0 && (你 != 0 && 他 != 0)) {
+        basic.showString("" + (你))
+        basic.pause(1000)
+        basic.showString("" + (他))
+        basic.pause(1000)
         比輸贏()
         basic.pause(5000)
         設定初值()
