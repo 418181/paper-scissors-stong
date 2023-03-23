@@ -2,9 +2,7 @@ input.onButtonPressed(Button.A, function () {
     if (我 == 0) {
         我 = 1
         basic.showIcon(IconNames.Scissors)
-        for (let index = 0; index < 4; index++) {
-            radio.sendValue("c", 1)
-        }
+        radio.sendValue("c", 1)
     }
 })
 function 設定初值 () {
@@ -44,18 +42,14 @@ input.onButtonPressed(Button.AB, function () {
     if (我 == 0) {
         我 = 3
         basic.showIcon(IconNames.Square)
-        for (let index = 0; index < 4; index++) {
-            radio.sendValue("c", 3)
-        }
+        radio.sendValue("c", 3)
     }
 })
 input.onButtonPressed(Button.B, function () {
     if (我 == 0) {
         我 = 2
         basic.showIcon(IconNames.SmallDiamond)
-        for (let index = 0; index < 4; index++) {
-            radio.sendValue("c", 2)
-        }
+        radio.sendValue("c", 2)
     }
 })
 radio.onReceivedValue(function (name, value) {
