@@ -75,5 +75,6 @@ radio.onReceivedValue(function (name, value) {
 let 他 = 0
 let 你 = 0
 let 我 = 0
+radio.setTransmitPower(7)
 radio.setGroup(69)
 設定初值()
