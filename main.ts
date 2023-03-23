@@ -16,7 +16,7 @@ function 設定初值 () {
 function 比輸贏 () {
     if (我 == 你 && 你 == 他) {
         basic.showIcon(IconNames.Duck)
-    } else if (我 != 你 && 你 != 他) {
+    } else if (我 != 你 && 你 != 他 && 他 != 你) {
         basic.showIcon(IconNames.Duck)
     } else if (我 == 1 && (你 == 3 && 他 == 3)) {
         basic.showIcon(IconNames.Happy)
